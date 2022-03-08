@@ -1,0 +1,305 @@
+/* Global */
+:root{
+    --dark-blue:#363f5f;
+    --green: #49aa26;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+
+}
+
+.container {
+    width: min(90vw,800px);
+    margin: auto;
+}
+
+/* Titles ========*/
+
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark-blue);
+    font-weight: normal;
+}
+/* Header ========*/
+
+header {
+    background: #2d4a22;
+    padding: 2rem 0 10rem;
+    text-align: center;
+}
+
+/* Links & buttons ========*/
+a {
+    text-decoration: none;
+    color: #49aa26;
+}
+
+a:hover {
+    color: #3dd705;
+}
+
+.button.new{
+    display: flex;
+    margin-bottom: .8rem;
+}
+
+
+button:hover{
+    background-color: #3dd705;
+}
+button {
+    border: none;
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+
+
+    color:white;
+
+    background-color: var(--green);
+
+    padding: 0;
+    
+}
+.button.cancel {
+    color: #e92929;
+    border: 2px #e92929 solid;
+    border-radius: 0.25rem;
+
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+
+    opacity: 0.6;
+
+
+    
+}
+
+.button.cancel:hover {
+    opacity: 1;
+}
+#logo {
+    color: #fff;
+    font-weight: 100;
+}
+
+/* Balance ========*/
+#balance {
+    margin-top: -8rem;
+}
+
+#balance h2 {
+    color: white;
+}
+/* Cards ========*/
+.card {
+    background-color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+
+    margin-bottom: 2rem;
+
+    color: var(--dark-blue);
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+
+    margin-top: 1rem;
+}
+
+.card.total {
+    background: var(--green);
+    color: white;
+
+}
+
+
+/* Table ========*/
+
+#transaction {
+    display:block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: #969cb3;
+    
+}
+
+table thead th:first-child,
+table tbody td:first-child{
+    border-radius: 0.35rem 0 0 0.35rem;
+}
+
+table thead th:last-child,
+table tbody td:last-child{
+    border-radius: 0 0.35rem 0.35rem 0;
+}
+
+
+table tbody tr {
+    opacity: 0.7;
+}
+
+table tbody tr:hover{
+    opacity: 1;
+}
+
+td.description {
+    color: var(--dark-blue);
+
+}
+
+td.income {
+    color: #12a454;
+}
+
+td.expense{
+    color: #e92929;
+
+}
+
+table thead th {
+    background-color: white;
+    font-weight: normal;
+    color: #969cb3;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+table tbody td {
+    background: white;
+    padding: 1rem 2rem;
+}
+
+
+/* MODAL */
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.modal-overlay.active{
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+}
+.modal {
+    padding: 2.4rem;
+    background: #f0f2f5;
+}
+
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    margin-top: 0;  
+}
+
+#form  input {
+    border: none;
+    border-radius: 0.2rem;
+    
+    padding: 0.8rem;
+    
+    width: 100%
+}
+
+
+.input-group.actions {
+    display: flex;
+    
+    justify-content: space-between;
+
+    align-items: center;
+    
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.input-group.actions > a,
+.input-group.actions > button {
+    width: 48%;
+}
+
+.help {
+    opacity: 0.4;
+}
+/* Footer ========*/
+
+footer {
+    text-align: center;
+    padding: 1rem 0 2rem;
+    color: var(--dark-blue);
+    opacity: 0.6;
+}
+
+/* Responsive ========*/
+
+@media (min-width: 800px){
+    html {
+        font-size:87.5%; /*14px*/
+     }
+    #balance{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    }
+}
